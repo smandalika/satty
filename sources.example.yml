@@ -1,0 +1,24 @@
+# Optional. Rename to sources.yml to add companies you specifically care about.
+#
+# The GitHub feeds already cover thousands of companies. Add a board here when
+# you want a company watched directly — you get the full job description, which
+# is the only place eligibility language ever appears, so those postings get
+# scored on what they actually say instead of on their title.
+#
+# The board name is the slug in the company's careers URL:
+#   job-boards.greenhouse.io/BOARD/jobs/123
+#   jobs.lever.co/BOARD/...
+#   jobs.ashbyhq.com/BOARD/...
+
+greenhouse:
+  - stripe
+  - databricks
+  - figma
+lever:
+  - ramp
+ashby:
+  - linear
+
+# Leave this out to use the defaults (the two aggregate feeds).
+# github_feeds:
+#   - {repo: "SimplifyJobs/Summer2027-Internships", label: "simplify-2027"}

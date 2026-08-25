@@ -1,0 +1,121 @@
+# Signals that decide whether a posting will actually talk to a sophomore.
+#
+# This is a seed list, not gospel. Programs get renamed and retired every year —
+# when you find one that's wrong or missing, edit this file. It is plain data and
+# the scorer reloads it on every run.
+
+# --- Tier 1: programs built for first- and second-years ---------------------
+# Matched on company AND title. A hit here is the strongest signal we have:
+# these postings are not just open to sophomores, they are aimed at them.
+sophomore_programs:
+  - {company: "google", pattern: "\\bstep\\b|student training in engineering"}
+  - {company: "meta", pattern: "meta university|\\bmetau\\b"}
+  - {company: "microsoft", pattern: "explore"}
+  - {company: "jane street", pattern: "insight|first[- ]time trading|\\bfttp\\b|immersion|amp it up"}
+  - {company: "citadel", pattern: "discover"}
+  - {company: "d\\.? ?e\\.? shaw", pattern: "discovery|nexus"}
+  - {company: "jpmorgan|j\\.p\\. morgan|chase", pattern: "sophomore|code for good|advancing black pathways|winning women|launching leaders"}
+  - {company: "goldman sachs", pattern: "insight|possibilities|undergraduate camp"}
+  - {company: "bank of america", pattern: "freshman|sophomore"}
+  - {company: "morgan stanley", pattern: "freshman|sophomore|early insights"}
+  - {company: "uber", pattern: "career prep|\\bstar\\b"}
+  - {company: "palantir", pattern: "path"}
+  - {company: "salesforce", pattern: "futureforce|tech launchpad"}
+  - {company: "capital one", pattern: "summit|tech intern"}
+  - {company: "susquehanna|\\bsig\\b", pattern: "discovery|freshman|sophomore"}
+  - {company: "optiver", pattern: "insight"}
+  - {company: "akuna", pattern: "academy"}
+  - {company: "hudson river trading|\\bhrt\\b", pattern: "first year|women in trading"}
+  - {company: "ibm", pattern: "accelerate"}
+  - {company: "nvidia", pattern: "ignition"}
+  - {company: "tesla", pattern: "\\bstart\\b"}
+  - {company: "pinterest", pattern: "engage|apprentice"}
+  - {company: "coinbase", pattern: "fellowship"}
+  - {company: "bloomberg", pattern: "bootcamp|women in tech"}
+  - {company: "two sigma", pattern: "bootcamp|fellowship"}
+  - {company: "intuit", pattern: "sophomore|leadership program"}
+
+# --- Tier 2: phrases that mean "underclassmen welcome" ----------------------
+# Checked against title and, when descriptions are enriched, the full posting.
+open_phrases:
+  strong:
+    - "sophomores?"
+    - "freshm[ae]n"
+    - "first[- ]year students?"
+    - "second[- ]year students?"
+    - "rising sophomores?"
+    - "rising juniors?"
+    - "underclassmen"
+    - "all undergraduate"
+    - "any year of study"
+    - "all class years"
+    - "no prior experience"
+    - "early career program"
+    - "1st or 2nd year"
+  mild:
+    - "undergraduate"
+    - "pursuing a bachelor"
+    - "currently enrolled"
+    - "students of all"
+    - "apprentice"
+    - "fellowship"
+    - "cohort"
+    - "scholars program"
+    - "\\bpathways\\b"
+    - "emerging talent"
+
+# --- Tier 3: phrases that mean "don't bother" -------------------------------
+closed_phrases:
+  hard:                      # a hit vetoes the posting outright
+    - "\\bph\\.?d\\b"
+    - "master'?s (degree )?(is )?required"
+    - "\\bmba\\b"
+    - "graduating in (2026|december 2026)"
+    - "final year"
+    - "penultimate year"
+    - "must be an? (rising )?seniors?"
+    - "senior standing"
+    - "new grad"
+    - "new graduate"
+    - "\\b[3-9]\\+? years of (professional |relevant )?experience"
+  soft:                      # a hit costs points but stays in the list
+    - "juniors? or seniors?"
+    - "rising seniors?"
+    - "third[- ]years?"
+    - "\\breturning intern"
+    - "prior internship experience"
+    - "advanced coursework"
+    - "graduate students?"
+
+# --- Seniority words in a title that mean it isn't an internship at all -----
+not_an_internship:
+  - "\\bsenior\\b"
+  - "\\bstaff\\b"
+  - "\\bprincipal\\b"
+  - "\\blead\\b"
+  - "\\bmanager\\b"
+  - "\\bdirector\\b"
+  - "\\bii+\\b"
+  - "\\bl[3-9]\\b"
+
+# --- Applicant-tracking systems, as a proxy for how a company screens -------
+# Startups on Greenhouse/Lever/Ashby usually read every application and rarely
+# gate on class year. Big-enterprise Workday portals filter on graduation date
+# before a human ever sees you.
+ats_signals:
+  responsive:                # small/mid company, human reads it
+    - greenhouse.io
+    - lever.co
+    - ashbyhq.com
+    - workable.com
+    - rippling.com
+    - jobs.gem.com
+  neutral:
+    - smartrecruiters.com
+    - icims.com
+    - jobvite.com
+  gated:                     # enterprise portal, resume-screened on grad year
+    - myworkdayjobs.com
+    - taleo.net
+    - brassring.com
+    - oraclecloud.com

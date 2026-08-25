@@ -1,0 +1,60 @@
+# Copy to profile.yml and edit. Everything Runway does keys off this file.
+name: Your Name
+year: sophomore
+grad_year: 2029          # used to check a posting's term is one you can actually take
+school: Your University
+
+majors:
+  - computer science
+
+# Keyword-matched against the posting title, category and (when enriched)
+# its full description. Be specific — these drive profile_fit.
+skills:
+  - python
+  - java
+  - javascript
+  - react
+  - sql
+  - machine learning
+  - data
+
+roles:
+  - software engineer
+  - swe
+  - backend
+  - full stack
+  - data science
+  - machine learning
+
+# Simplify's own taxonomy. Leave empty to accept all.
+categories:
+  - Software
+  - AI/ML/Data
+  - Product
+
+locations:
+  - Remote
+  - New York, NY
+  - San Francisco, CA
+  - Seattle, WA
+  - Boston, MA
+remote_ok: true
+
+needs_sponsorship: false     # true -> drops US-citizens-only and no-sponsorship roles
+us_work_authorized: true
+
+# Terms you'd actually accept. A current sophomore's real target is Summer 2027.
+terms:
+  - Summer 2027
+  - Fall 2026
+  - Winter 2027
+  - Spring 2027
+
+exclude_companies:
+  - Cvent
+exclude_keywords:
+  - unpaid
+  - commission only
+
+min_score: 32          # anything below this never reaches you
+max_age_days: 21       # ignore postings staler than this
