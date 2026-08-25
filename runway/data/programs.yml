@@ -1,0 +1,194 @@
+# Programs built specifically for first- and second-year students.
+#
+# These almost never show up in the scraped feeds: they open on their own
+# calendar, often months before regular internship season, and the aggregators
+# don't track them. They are also the single highest-yield thing a sophomore
+# can apply to, because you aren't competing with rising seniors.
+#
+# `opens` / `closes` are the months the window has historically fallen in and
+# WILL drift year to year. Treat them as "start checking", not as fact — the
+# linked page is always the truth. Fix anything you find stale; this is just
+# a data file.
+
+programs:
+  - company: Google
+    program: STEP (Student Training in Engineering Program)
+    url: https://buildyourfuture.withgoogle.com/programs/step
+    eligibility: First- and second-year undergraduates
+    opens: 9
+    closes: 11
+    note: The flagship sophomore SWE internship. Apply the week it opens.
+
+  - company: Microsoft
+    program: Explore Program
+    url: https://careers.microsoft.com/students
+    eligibility: First- and second-year undergraduates
+    opens: 9
+    closes: 12
+    note: Rotates you through SWE, PM and design over one summer.
+
+  - company: Meta
+    program: Meta University
+    url: https://www.metacareers.com/careerprograms/students
+    eligibility: Rising sophomores and juniors
+    opens: 10
+    closes: 1
+    note: Engineering, product and analytics tracks.
+
+  - company: Jane Street
+    program: INSIGHT / FTTP / Immersion
+    url: https://www.janestreet.com/join-jane-street/programs-and-events/
+    eligibility: First- and second-year undergraduates
+    opens: 9
+    closes: 12
+    note: Several separate underclassman programs — check which you fit.
+
+  - company: Citadel
+    program: Discover Citadel
+    url: https://www.citadel.com/careers/students/
+    eligibility: First- and second-year undergraduates
+    opens: 10
+    closes: 12
+    note: A paid week-long insight program that feeds their internship pipeline.
+
+  - company: D. E. Shaw
+    program: Discovery Fellowship
+    url: https://www.deshaw.com/careers/students
+    eligibility: Second-year undergraduates
+    opens: 10
+    closes: 1
+
+  - company: Susquehanna (SIG)
+    program: Discovery Day
+    url: https://careers.sig.com/campus-programs
+    eligibility: First- and second-year undergraduates
+    opens: 9
+    closes: 11
+
+  - company: Optiver
+    program: Insight Day
+    url: https://optiver.com/working-at-optiver/career-opportunities/
+    eligibility: First- and second-year undergraduates
+    opens: 9
+    closes: 12
+
+  - company: IMC Trading
+    program: First-Year Insight
+    url: https://careers.imc.com/us/en/early-careers
+    eligibility: First- and second-year undergraduates
+    opens: 9
+    closes: 12
+
+  - company: Akuna Capital
+    program: Akuna Academy
+    url: https://akunacapital.com/careers/students
+    eligibility: Underclassmen
+    opens: 9
+    closes: 12
+
+  - company: Hudson River Trading
+    program: Women in Trading & Technology
+    url: https://www.hudsonrivertrading.com/careers/
+    eligibility: Undergraduates, all years
+    opens: 9
+    closes: 12
+
+  - company: JPMorgan Chase
+    program: Sophomore Edge / Code for Good
+    url: https://careers.jpmorgan.com/us/en/students/programs
+    eligibility: Second-year undergraduates (Code for Good is open to all years)
+    opens: 8
+    closes: 11
+    note: Code for Good is a weekend hackathon that converts to interviews.
+
+  - company: Goldman Sachs
+    program: Insight Series / Possibilities Summits
+    url: https://www.goldmansachs.com/careers/students/programs
+    eligibility: First- and second-year undergraduates
+    opens: 9
+    closes: 1
+
+  - company: Bank of America
+    program: Freshman / Sophomore Analyst Program
+    url: https://campus.bankofamerica.com/
+    eligibility: First- and second-year undergraduates
+    opens: 8
+    closes: 11
+
+  - company: Morgan Stanley
+    program: Early Insights (Freshman & Sophomore)
+    url: https://www.morganstanley.com/careers/students-graduates
+    eligibility: First- and second-year undergraduates
+    opens: 9
+    closes: 12
+
+  - company: Uber
+    program: Career Prep
+    url: https://www.uber.com/us/en/careers/university/
+    eligibility: Second-year undergraduates
+    opens: 9
+    closes: 11
+    note: A two-year mentorship track, not a single summer.
+
+  - company: Palantir
+    program: Path Fellowship
+    url: https://www.palantir.com/careers/students/
+    eligibility: Underclassmen
+    opens: 10
+    closes: 1
+
+  - company: Capital One
+    program: Software Engineering Summit
+    url: https://www.capitalonecareers.com/students-and-grads
+    eligibility: First- and second-year undergraduates
+    opens: 9
+    closes: 12
+
+  - company: Salesforce
+    program: Futureforce Tech Launchpad
+    url: https://www.salesforce.com/company/careers/university-recruiting/
+    eligibility: Undergraduates, all years
+    opens: 10
+    closes: 2
+
+  - company: IBM
+    program: Accelerate
+    url: https://www.ibm.com/careers/students
+    eligibility: Undergraduates, all years
+    opens: 10
+    closes: 2
+
+  - company: Pinterest
+    program: Apprenticeship / Engage
+    url: https://www.pinterestcareers.com/university/
+    eligibility: Underclassmen
+    opens: 10
+    closes: 1
+
+  - company: Deloitte
+    program: Discovery Internship
+    url: https://www2.deloitte.com/us/en/pages/careers/topics/students.html
+    eligibility: First- and second-year undergraduates
+    opens: 8
+    closes: 11
+
+  - company: EY
+    program: Launch / Emerging Leaders
+    url: https://www.ey.com/en_us/careers/students
+    eligibility: First- and second-year undergraduates
+    opens: 8
+    closes: 12
+
+  - company: PwC
+    program: Start / Destination CPA
+    url: https://www.pwc.com/us/en/careers/campus.html
+    eligibility: First- and second-year undergraduates
+    opens: 8
+    closes: 12
+
+  - company: KPMG
+    program: Embark Scholars
+    url: https://www.kpmguscareers.com/students/
+    eligibility: First- and second-year undergraduates
+    opens: 8
+    closes: 11

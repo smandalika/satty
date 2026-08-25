@@ -1,0 +1,44 @@
+# Runs Runway on a schedule so new postings reach you without you remembering
+# to look. Fork-and-forget: the only setup is the two secrets below.
+name: runway
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # hourly; GitHub may delay a run under load
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      # The database is what stops you being told about the same job twice.
+      # Cached rather than committed so the workflow never pushes to the repo.
+      - uses: actions/cache@v4
+        with:
+          path: runway.db
+          key: runway-db-${{ github.run_id }}
+          restore-keys: runway-db-
+
+      - name: Scan for new matches
+        env:
+          RUNWAY_WEBHOOK_URL: ${{ secrets.RUNWAY_WEBHOOK_URL }}
+          RUNWAY_EMAIL_TO: ${{ secrets.RUNWAY_EMAIL_TO }}
+          RUNWAY_SMTP_HOST: ${{ secrets.RUNWAY_SMTP_HOST }}
+          RUNWAY_SMTP_USER: ${{ secrets.RUNWAY_SMTP_USER }}
+          RUNWAY_SMTP_PASS: ${{ secrets.RUNWAY_SMTP_PASS }}
+        run: python -m runway run --html digest.html
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: digest
+          path: digest.html
+          retention-days: 14
